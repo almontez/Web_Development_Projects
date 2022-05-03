@@ -1,0 +1,69 @@
+Introduction
+In this assignment, you'll write a simple web application that will introduce you to HTML, form submission and server-side JavaScript.  
+You can use any code presented in the course modules for implementing this web app.
+
+Learning Outcomes
+What tools and libraries we can use to develop web applications using Node? (Module 3 MLO 1)
+What is HTML and what are the fundamental concepts of HTML? (Module 3 MLO 2)
+What are some of the important HTML elements and their uses? (Module 3 MLO 3)
+How can we create links from an HTML document to other HTML documents and write a web application that can serve such HTML documents? (Module 3 MLO 4)
+What are HTML forms and how can we process them using Node? (Module 3 MLO 5)
+
+Instructions
+Write a web application using Node and Express to
+
+1. Serve the following 3 HTML pages
+
+1.1 Homepage
+Update index.html so that this page has an h1 element and includes links using the anchor element to the following 2 HTML pages: Stock Order Page, Stock Search Page
+
+1.2 Stock Order Page
+Create an HTML file that displays an HTML table with the data provided in the file stocks.js, and an HTML form to order stocks.
+When the form is submitted, an HTTP request must be sent to the server running at localhost:3000
+The request must include the user's selection for the stock symbol and the quantity they want to buy.
+The server will send back the Stock Order Response which is displayed in the browser.
+
+Note: This page must be a static HTML file. No JavaScript code should be executed to generate or modify the page when a request comes for this page.
+
+1.3 Stock Search Page
+Create an HTML file with a form that provides two choices to the user for searching the stock data by Highest price or Lowest price.
+
+You must use radio buttons to provide these 2 choices to the user, and provide a button to submit the form.
+This page must also have an h1 element in addition to the HTML form.
+
+When the form is submitted, an HTTP request must be sent to the server running at localhost:3000. The request must include the user's choice of the search criterion.
+The server will send back the Stock Search Response which is displayed in the browser.
+
+Note: This page must be a static HTML file. No JavaScript code should be executed to generate or modify the page when a request comes for this page.
+
+2. Implement route handlers that
+
+Service HTTP requests sent from the browser when users submit an HTML form from the Stock Order Page or the Stock Search Page, and
+Send back appropriate HTTP responses to these requests
+Note that in this assignment, you will not write any client-side JavaScript code, i.e., no JavaScript code will be executed in the browser. 
+All the JavaScript code you write will execute server-side in the Express server.
+
+2.1 Stock Order Response
+Add a route handler in server.js which gets executed when the server receives the request sent by the browser when the form on Stock Order Page is submitted.
+This route handler must dynamically generate and send back the appropriate HTTP response.
+
+The JavaScript code must use the variable stocks  to access the stock data and you must not hard-code the data from the file stocks.js in your JavaScript code.
+You must write a function findStockBySymbol(...). This function must take one argument, a string value with the symbol of the stock to look up. This function must 
+return the stock object from the variable stocks that matches the symbol passed as the argument to the function. This function doesn't need to handle the case 
+where it is called with a symbol that doesn't exist in the variable stocks.
+
+The route handler must call this function findStockBySymbol(...) passing it the symbol sent in the HTTP request and then use the object returned by the function 
+to generate the response.
+
+2.2 Stock Search Response
+Add a route handler in server.js which gets executed when the server receives the request sent by the browser when the form on Stock Search Page is submitted.
+This route handler must dynamically generate and send back the appropriate HTTP response.
+
+The JavaScript code must use the variable stocks to access the stock data and you must not hard-code the data from the file stocks.js in your JavaScript code.
+You must write a function findStockByPrice(...). This function must take one argument which tells the function whether to find the stock with the lowest price 
+or the one with the highest price. It must return the object from the variable stocks that matches the criterion passed as the argument.
+In case of a tie, the function can return any one of the objects that meet the specified criterion.
+
+This function must find the relevant stock "on the fly," i.e., you must not hard-code or permanently store the information about which stock has the highest price 
+and which stock has the lowest price. Your route handler must call this function findStockByPrice(...) passing it the criterion sent in the HTTP request and then 
+use the object returned by the function to generate the response. 
