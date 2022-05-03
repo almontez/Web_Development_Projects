@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 3</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>Search Stocks</h1>
+
+    <p>You can find the stock with the highest or lowest price here.
+    <br> Select the button for <q>highest</q> or <q>lowest</q> price. Then click <q>Submit</q>
+    </p>
+
+    <form action="http://localhost:3000/find-stock" method="POST" id="find-stock">
+        <label>Find stock with the:
+        <input type="radio" name="find_stock" id="highest-stock" value="highest price">
+        <label for="highest-stock">highest price</label>
+        <input type="radio" name="find_stock" id="lowest-stock" value="lowest price">
+        <label for="lowest-stock">lowest price</label>
+        </label>
+       
+        <br>
+        <br>
+       
+        <input type="submit" class="submit-bttn" value="Submit">
+    </form>
+    
+
+</body>
+
+</html>
