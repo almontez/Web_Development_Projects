@@ -1,0 +1,99 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color: blanchedalmond;
+    color: darkgreen;
+    padding: 2%;
+    margin-top: 0px;
+    
+}
+
+h1 {
+    color: red;
+    margin-top: 0px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0px;
+    padding-top: 0px;
+    color:rgb(82, 34, 131);
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: Arial, sans-serif;
+}
+
+.Table {
+    border: 3px solid rebeccapurple;
+    border-collapse: collapse;
+}
+
+tr th {
+    padding: 12px;
+    width: 5%;
+    border-bottom: 3px solid rebeccapurple;
+    background-color: rgb(181, 225, 117);
+    color:rebeccapurple;
+    
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bolder;
+    font-size: large;
+}
+
+tr td {
+    padding: 12px;
+    text-align: left;
+    border-top: 2px solid rebeccapurple;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.quantity-holder {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+#HomePage-Title {
+    margin-top: 0px;
+    padding-top: 0px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+img {
+    display: block;
+    max-width: 10%;
+    min-height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.HomePage-Intro {
+    text-align: center;
+    margin-top: 2%;
+}
+
+fieldset {
+    font-family:'Courier New', Courier, monospace;
+    border: 3px solid rebeccapurple
+}
+
+legend {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+input {
+    font-family:'Courier New', Courier, monospace;
+}
+
+button {
+    font-family:'Courier New', Courier, monospace;
+    margin: 5px;
+}
